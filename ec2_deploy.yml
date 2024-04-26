@@ -24,7 +24,7 @@
 
     - name: Add instance host to group
       add_host:
-        hostname: "{{item.public.ip.address}}"
+        hostname: "{{ item.public.ip.address }}"
         groupname: launched
       loop: "{{ ec2_instance_result.instances }}"
 
